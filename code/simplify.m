@@ -1,4 +1,4 @@
-function [simpX,simpC] = simplify(alpha, lambda, sigma, k, X, C)
+function simpX = simplify(alpha, lambda, sigma, k, X)
     
     n = size(X,1);
     m = ceil(n*alpha);
@@ -14,4 +14,5 @@ function [simpX,simpC] = simplify(alpha, lambda, sigma, k, X, C)
     I = eye(n);
     J = ones(n);
     
+    simpX = [];
 end
