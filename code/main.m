@@ -7,7 +7,7 @@ lambda = 0.1;
 sigma = 2;
 k = 15;
 
-% load and split the point cloud to grids
+% load and split the point cloud into grids
 [grid, forinit, GRID_NUM, GRID_DELTA] = divide(pcname, alpha);
 
 % simplify each grid
@@ -18,6 +18,7 @@ m = 0;
 X = zeros(forinit);
 for i = 1:n
    tmp = simplify(alpha, lambda, sigma, k, grid(i).X);
+   % remove overlapped edges
    range = grid(i).range;
    range(:,1) = range(:,1)-GRID_DELTA;
    range(:,2) = range(:,2)+GRID_DELTA;
