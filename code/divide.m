@@ -29,21 +29,22 @@ function [grid, forinit, num, delta, sigma] = ...
     for i = 1:GRID_NUM(1)
         x_min = range(1,1)+GRID_LEN(1)*(i-1)-GRID_DELTA;
         x_max = range(1,1)+GRID_LEN(1)*i+GRID_DELTA;
-        tmp = X(X(:,1)>x_min & X(:,1)<x_max);
+        tmpi = X(X(:,1)>x_min & X(:,1)<x_max,:);
         for j = 1:GRID_NUM(2)
             y_min = range(2,1)+GRID_LEN(2)*(j-1)-GRID_DELTA;
             y_max = range(2,1)+GRID_LEN(2)*j+GRID_DELTA;
-            tmp = tmp(tmp(:,2)>y_min & tmp(:,2)<y_max);
+            tmpj = tmpi(tmpi(:,2)>y_min & tmpi(:,2)<y_max,:);
             for k = 1:GRID_NUM(3)
                 z_min = range(3,1)+GRID_LEN(3)*(k-1)-GRID_DELTA;
                 z_max = range(3,1)+GRID_LEN(3)*k+GRID_DELTA;
-                tmp = tmp(tmp(:,3)>z_min & tmp(:,3)<z_max);
+                tmpk = tmpj(tmpj(:,3)>z_min & tmpj(:,3)<z_max,:);
                 p = (i-1)*GRID_NUM(2)*GRID_NUM(3)+(j-1)*GRID_NUM(3)+k;
-                if size(tmp,1)<(1/alpha)
+                if size(tmpk,1)<(1/alpha)
+                    disp([num2str(i),' is empty grid']);
                     grid(p).X = [];
                     grid(p).range = [];
                 else
-                    grid(p).X = tmp;
+                    grid(p).X = tmpk;
                     grid(p).range = ...
                         [x_min+GRID_DELTA, x_max-GRID_DELTA; 
                          y_min+GRID_DELTA, y_max-GRID_DELTA; 

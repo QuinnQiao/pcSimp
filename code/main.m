@@ -3,6 +3,7 @@
 % Author: Junkun Qi
 % 2018/5/13
 clear;
+time_start = clock;
 
 pcname = 'bunny.ply';
 simpname = 'bunny-simp.ply';
@@ -26,9 +27,9 @@ for i = 1:n
    range = grid(i).range;
    range(:,1) = range(:,1)-delta;
    range(:,2) = range(:,2)+delta;
-   tmp = tmp(tmp(:,1)>range(1,1) & tmp(:,1)<range(1,2));
-   tmp = tmp(tmp(:,2)>range(2,1) & tmp(:,2)<range(2,2));
-   tmp = tmp(tmp(:,3)>range(3,1) & tmp(:,1)<range(3,2));
+   tmp = tmp(tmp(:,1)>range(1,1) & tmp(:,1)<range(1,2),:);
+   tmp = tmp(tmp(:,2)>range(2,1) & tmp(:,2)<range(2,2),:);
+   tmp = tmp(tmp(:,3)>range(3,1) & tmp(:,3)<range(3,2),:);
    t = size(tmp,1);
    X(m+1:m+t,:) = tmp;
    m = m + t;
@@ -41,3 +42,6 @@ else % == 6
     pc = pointCloud(X(1:m,1:3),'Color',X(1:m,4:6));
 end
 pcwrite(pc,simpname,'PLYFormat','binary');
+
+time_end = clock;
+disp(['Runtime: ',num2str(etime(time_end,time_start))]);
