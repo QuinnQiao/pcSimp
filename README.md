@@ -2,7 +2,7 @@
 
 #### **Evenness-controllable point cloud simplification via graph filter**
 
-$\ $
+
 
 Code in matlab:
 
