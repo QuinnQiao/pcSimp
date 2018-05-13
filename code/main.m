@@ -10,9 +10,10 @@ alpha = 0.1;
 lambda = 0.1;
 eta = 0.05;
 k = 15;
+p_thres = 3000;
 
 % load and split the point cloud into grids
-[grid, forinit, n, delta, sigma] = divide(pcname, alpha);
+[grid, forinit, n, delta, sigma] = divide(pcname, alpha, p_thres);
 
 % simplify each grid
 % simp_grid = repmat(...

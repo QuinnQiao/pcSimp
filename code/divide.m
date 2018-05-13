@@ -1,5 +1,5 @@
 function [grid, forinit, num, delta, sigma] = ...
-            divide(pcname, alpha)
+            divide(pcname, alpha, p_thres)
     % divide the point cloud into overlapped grids
     % Author: Junkun Qi
     % 2018/5/13
@@ -15,8 +15,7 @@ function [grid, forinit, num, delta, sigma] = ...
     clear pc;
 
     % compute grid parameter
-    POINT_THRES = 3000;
-    GRID_NUM = ceil(n/POINT_THRES);
+    GRID_NUM = ceil(n/p_thres);
     VOLUMN = prod(range(:,2)-range(:,1));
     GRID_LEN = nthroot(VOLUMN/GRID_NUM,3);
     GRID_DELTA = GRID_LEN*0.05;
@@ -24,7 +23,7 @@ function [grid, forinit, num, delta, sigma] = ...
     GRID_LEN = (range(:,2)-range(:,1))./GRID_NUM;
 
     % construct grid with overlapping
-    forinit = [ceil(POINT_THRES*1.5), size(X,2)];
+    forinit = [ceil(p_thres*1.5), size(X,2)];
     grid = repmat(struct('X',zeros(forinit),...
             'range',zeros(3,2)), 1,prod(GRID_NUM));
     for i = 1:GRID_NUM(1)
