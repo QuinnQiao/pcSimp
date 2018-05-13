@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.16)  7 MAY 2018 17:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  13 MAY 2018 17:06
 entering extended mode
 **./IEEE-conference-A4-LaTeX-format.tex
 (IEEE-conference-A4-LaTeX-format.tex
@@ -15,7 +15,7 @@ Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 366.
 
-("D:\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+(D:\MikTex\tex\latex\psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 210mm x 297mm (a4) paper.
@@ -88,27 +88,27 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count90
 \@IEEEtranrubishbin=\box26
-) ("D:\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+) (D:\MikTex\tex\latex\psnfss\times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("D:\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(D:\MikTex\tex\latex\amsmath\amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-("D:\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(D:\MikTex\tex\latex\amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("D:\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(D:\MikTex\tex\latex\amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen117
 ))
-("D:\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(D:\MikTex\tex\latex\amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen118
 )
-("D:\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(D:\MikTex\tex\latex\amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count91
@@ -149,28 +149,28 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-("D:\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+(D:\MikTex\tex\latex\graphics\epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
 
-("D:\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(D:\MikTex\tex\latex\graphics\graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("D:\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(D:\MikTex\tex\latex\graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
-("D:\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(D:\MikTex\tex\latex\graphics\graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-("D:\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(D:\MikTex\tex\latex\graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("D:\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+(D:\MikTex\tex\latex\graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("D:\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+(D:\MikTex\tex\latex\graphics-def\pdftex.def
 File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen126
@@ -179,34 +179,34 @@ File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 \epsfxsize=\dimen128
 \epsfysize=\dimen129
 )
-("D:\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+(D:\MikTex\tex\latex\oberdiek\epstopdf.sty
 Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
 
-("D:\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+(D:\MikTex\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("D:\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(D:\MikTex\tex\generic\oberdiek\infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("D:\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+(D:\MikTex\tex\latex\oberdiek\grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("D:\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+(D:\MikTex\tex\generic\oberdiek\kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-("D:\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(D:\MikTex\tex\generic\oberdiek\ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-("D:\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(D:\MikTex\tex\latex\oberdiek\kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-("D:\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+(D:\MikTex\tex\generic\oberdiek\kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("D:\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+(D:\MikTex\tex\generic\oberdiek\etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-("D:\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+(D:\MikTex\tex\generic\oberdiek\ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -215,11 +215,11 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("D:\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+(D:\MikTex\tex\generic\oberdiek\pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("D:\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+(D:\MikTex\tex\generic\oberdiek\ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -234,7 +234,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 ))
-("D:\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(D:\MikTex\tex\latex\amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -256,117 +256,113 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
-
-("D:\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count103
-\scratchdimen=\dimen130
-\scratchbox=\box29
-\nofMPsegments=\count104
-\nofMParguments=\count105
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count106
-\MPscratchDim=\dimen131
-\MPnumerator=\count107
-\makeMPintoPDFobject=\count108
-\everyMPtoPDFconversion=\toks22
-)
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 62.
- ("D:\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+ (D:\MikTex\tex\latex\psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <9> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 62.
 LaTeX Font Info:    Try loading font information for U+msa on input line 74.
 
-("D:\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+(D:\MikTex\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 74.
-
-("D:\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+ (D:\MikTex\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ** ATTENTION: \keywords is deprecated (line 84). Use \IEEEkeywords instead.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[1{C:/Users/zhang/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `sec:title and author details' on page 2 undefined on 
+input line 325.
+
+
+LaTeX Warning: Reference `sec:page style' on page 2 undefined on input line 331
+.
+
+[2]
 Package epstopdf Info: Source file: <fig_1.eps>
-(epstopdf)                    date: 2013-02-21 21:02:14
+(epstopdf)                    date: 2018-05-12 22:31:07
 (epstopdf)                    size: 328069 bytes
 (epstopdf)             Output file: <fig_1-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 22:05:34
+(epstopdf)                    date: 2018-05-12 22:31:07
 (epstopdf)                    size: 3444 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig_1-eps-converted-to.pdf 
 fig_1.eps>
-(epstopdf)             \includegraphics on input line 283.
+(epstopdf)             \includegraphics on input line 362.
 Package epstopdf Info: Output file is already uptodate.
-<fig_1-eps-converted-to.pdf, id=17, pagebox=cropbox, 138.5175pt x 101.37875pt>
+<fig_1-eps-converted-to.pdf, id=21, pagebox=cropbox, 138.5175pt x 101.37875pt>
 File: fig_1-eps-converted-to.pdf Graphic file (type pdf)
 <use fig_1-eps-converted-to.pdf>
-Package pdftex.def Info: fig_1-eps-converted-to.pdf  used on input line 283. on
- input line 283.
+Package pdftex.def Info: fig_1-eps-converted-to.pdf  used on input line 362. on
+ input line 362.
 Package pdftex.def Info: Requested size: 195.47041pt x 143.06316pt on input lin
-e 283.
+e 362.
 Package epstopdf Info: Source file: <lores_photo.eps>
-(epstopdf)                    date: 2013-02-21 21:02:16
-(epstopdf)                    size: 84901 bytes
+(epstopdf)                    date: 2018-05-12 22:31:07
+(epstopdf)                    size: 86035 bytes
 (epstopdf)             Output file: <lores_photo-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 22:05:35
+(epstopdf)                    date: 2018-05-12 22:31:07
 (epstopdf)                    size: 31026 bytes
 (epstopdf)             Command: <epstopdf --outfile=lores_photo-eps-converted-t
 o.pdf lores_photo.eps>
-(epstopdf)             \includegraphics on input line 304.
+(epstopdf)             \includegraphics on input line 383.
 Package epstopdf Info: Output file is already uptodate.
-<lores_photo-eps-converted-to.pdf, id=18, pagebox=cropbox, 129.48375pt x 183.68
+<lores_photo-eps-converted-to.pdf, id=22, pagebox=cropbox, 129.48375pt x 183.68
 625pt>
 File: lores_photo-eps-converted-to.pdf Graphic file (type pdf)
 <use lores_photo-eps-converted-to.pdf>
 Package pdftex.def Info: lores_photo-eps-converted-to.pdf  used on input line 3
-04. on input line 304.
+83. on input line 383.
 Package pdftex.def Info: Requested size: 129.45575pt x 183.63406pt on input lin
-e 304.
+e 383.
 Package epstopdf Info: Source file: <hires_photo.eps>
-(epstopdf)                    date: 2013-02-21 21:02:14
-(epstopdf)                    size: 72014 bytes
+(epstopdf)                    date: 2018-05-12 22:31:07
+(epstopdf)                    size: 72979 bytes
 (epstopdf)             Output file: <hires_photo-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 22:05:36
+(epstopdf)                    date: 2018-05-12 22:31:07
 (epstopdf)                    size: 30735 bytes
 (epstopdf)             Command: <epstopdf --outfile=hires_photo-eps-converted-t
 o.pdf hires_photo.eps>
-(epstopdf)             \includegraphics on input line 310.
+(epstopdf)             \includegraphics on input line 389.
 Package epstopdf Info: Output file is already uptodate.
-<hires_photo-eps-converted-to.pdf, id=19, pagebox=cropbox, 121.45375pt x 177.66
+<hires_photo-eps-converted-to.pdf, id=23, pagebox=cropbox, 121.45375pt x 177.66
 376pt>
 File: hires_photo-eps-converted-to.pdf Graphic file (type pdf)
 <use hires_photo-eps-converted-to.pdf>
 Package pdftex.def Info: hires_photo-eps-converted-to.pdf  used on input line 3
-10. on input line 310.
+89. on input line 389.
 Package pdftex.def Info: Requested size: 125.5398pt x 183.63406pt on input line
- 310.
+ 389.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2 <./fig_1-eps-converted-to.pdf> <./lores_photo-eps-converted-to.pdf>]
 
-LaTeX Warning: Citation `IEEEexample:book' on page 3 undefined on input line 35
-0.
+LaTeX Warning: Reference `sec:title and author details' on page 3 undefined on 
+input line 408.
+
+
+LaTeX Warning: Citation `IEEEexample:book' on page 3 undefined on input line 42
+9.
 
 
 LaTeX Warning: Citation `IEEEexample:bookwithseriesvolume' on page 3 undefined 
-on input line 353.
+on input line 432.
 
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¿ in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
 
 LaTeX Warning: Citation `IEEEexample:article_typical' on page 3 undefined on in
-put line 354.
+put line 433.
 
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¿ in font ptmr7t!
@@ -376,79 +372,80 @@ Missing character: There is no ¿ in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
 
 LaTeX Warning: Citation `IEEEexample:article_typical' on page 3 undefined on in
-put line 355.
+put line 434.
 
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¿ in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
 
 LaTeX Warning: Citation `IEEEexample:article_typical' on page 3 undefined on in
-put line 357.
+put line 436.
 
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¿ in font ptmr7t!
 Missing character: There is no ½ in font ptmr7t!
 
 LaTeX Warning: Citation `IEEEexample:bookwithseriesvolume' on page 3 undefined 
-on input line 359.
+on input line 438.
 
 
 LaTeX Warning: Citation `IEEEexample:article_typical' on page 3 undefined on in
-put line 360.
+put line 439.
 
 
 LaTeX Warning: Citation `IEEEexample:confwithpaper' on page 3 undefined on inpu
-t line 361.
+t line 440.
 
 
-LaTeX Warning: Citation `IEEEexample:book' on page 3 undefined on input line 36
-7.
+LaTeX Warning: Citation `IEEEexample:book' on page 3 undefined on input line 44
+6.
 
 
 LaTeX Warning: Citation `IEEEexample:bookwithseriesvolume' on page 3 undefined 
-on input line 368.
+on input line 447.
 
 
 LaTeX Warning: Citation `IEEEexample:article_typical' on page 3 undefined on in
-put line 369.
+put line 448.
 
 
 LaTeX Warning: Citation `IEEEexample:confwithpaper' on page 3 undefined on inpu
-t line 370.
+t line 449.
 
 
-LaTeX Warning: Citation `IEEEexample:uspat' on page 3 undefined on input line 3
-71.
+LaTeX Warning: Citation `IEEEexample:uspat' on page 3 undefined on input line 4
+50.
+
+[3 <./fig_1-eps-converted-to.pdf> <./lores_photo-eps-converted-to.pdf> <./hires
+_photo-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `IEEEexample:IEEEwebsite' on page 4 undefined on input 
+line 451.
 
 
-LaTeX Warning: Citation `IEEEexample:IEEEwebsite' on page 3 undefined on input 
-line 372.
+LaTeX Warning: Citation `IEEEexample:shellCTANpage' on page 4 undefined on inpu
+t line 452.
 
 
-LaTeX Warning: Citation `IEEEexample:shellCTANpage' on page 3 undefined on inpu
-t line 373.
+LaTeX Warning: Citation `IEEEexample:motmanual' on page 4 undefined on input li
+ne 453.
 
 
-LaTeX Warning: Citation `IEEEexample:motmanual' on page 3 undefined on input li
-ne 374.
+LaTeX Warning: Citation `IEEEexample:datasheet' on page 4 undefined on input li
+ne 454.
 
 
-LaTeX Warning: Citation `IEEEexample:datasheet' on page 3 undefined on input li
-ne 375.
+LaTeX Warning: Citation `IEEEexample:masterstype' on page 4 undefined on input 
+line 455.
 
 
-LaTeX Warning: Citation `IEEEexample:masterstype' on page 3 undefined on input 
-line 376.
+LaTeX Warning: Citation `IEEEexample:techreptype' on page 4 undefined on input 
+line 456.
 
 
-LaTeX Warning: Citation `IEEEexample:techreptype' on page 3 undefined on input 
-line 377.
+LaTeX Warning: Citation `IEEEexample:standard' on page 4 undefined on input lin
+e 457.
 
-
-LaTeX Warning: Citation `IEEEexample:standard' on page 3 undefined on input lin
-e 378.
-
-[3 <./hires_photo-eps-converted-to.pdf>]
 No file IEEE-conference-A4-LaTeX-format.bbl.
 
 ** Conference Paper **
@@ -461,33 +458,31 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
-
-] (IEEE-conference-A4-LaTeX-format.aux)
+[4] (IEEE-conference-A4-LaTeX-format.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2923 strings out of 493312
- 43211 string characters out of 3144947
- 112924 words of memory out of 3000000
- 6422 multiletter control sequences out of 15000+200000
- 41625 words of font info for 89 fonts, out of 3000000 for 9000
+ 2642 strings out of 493312
+ 39219 string characters out of 3146703
+ 109797 words of memory out of 3000000
+ 6135 multiletter control sequences out of 15000+200000
+ 44382 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,8n,24p,348b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<D:/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
-<D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/MiKTeX 2.
-9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/MiKTeX 2.9/fonts/type1/urw
-/courier/ucrr8a.pfb><D:/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><D:/MiKTeX 
-2.9/fonts/type1/urw/times/utmbi8a.pfb><D:/MiKTeX 2.9/fonts/type1/urw/times/utmr
-8a.pfb><D:/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on IEEE-conference-A4-LaTeX-format.pdf (4 pages, 195780 bytes).
+{D:/MikTex/fonts/enc/dvips/base/8r.enc}<D:/MikTex/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/MikTex/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/MikTex/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/MikTex/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><D:/MikTex/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb><D:/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/MikTe
+x/fonts/type1/urw/courier/ucrr8a.pfb><D:/MikTex/fonts/type1/urw/times/utmb8a.pf
+b><D:/MikTex/fonts/type1/urw/times/utmbi8a.pfb><D:/MikTex/fonts/type1/urw/times
+/utmr8a.pfb><D:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on IEEE-conference-A4-LaTeX-format.pdf (4 pages, 215245 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

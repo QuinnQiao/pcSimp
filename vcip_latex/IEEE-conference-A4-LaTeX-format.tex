@@ -12,7 +12,7 @@
 \usepackage{epstopdf}
 \usepackage{amsfonts}
 %
-\title{Evenness-controllable point cloud simplification based on graph}
+\title{Evenness-controllable point cloud simplification via graph filter}
 %
 \author{%
 % author names are typeset in 11pt, which is the default size in the author block
@@ -113,26 +113,36 @@ what's GSP and how to construct graph
 
 Here, we describe point cloud simplification as a process of 
 resampling of the point cloud: given a point cloud $P$ with 
-$|P|=N$, find a point cloud $P' \subset P$ with $|P'|=M<N$.
+$|P|=N$, find a point cloud $P' \subset P$ with $|P'|=M<N$. 
+We define the simplification rate $\alpha=M/N$. 
 
 For convenience, we represent the point cloud with $N$ points
 and $K$ attributes as $X \in \mathbb R^{N \times K}$, 
-where $i$th row represents the $i$th point, represented as $x_i^T$. 
+where $i$th row represents the $i$th point, denoted as $x_i^T$. 
 Attributes can be coordinates, colors and others, $K \ge 3$.
 To represent the simplified point cloud, we consider the diagonal 
 matrix $\Psi$, called resampling matrix with $\Psi_{ii}=1$ if 
 $x_i$ in the simplified point cloud and $\Psi_{ii}=0$ if not. 
 Thus, the simplified point cloud can be represented as $\Psi X$.
 
-Our goal is to find the optimal resampling matrix $Psi$ to keep 
+Our goal is to find the optimal resampling matrix $\Psi$ to keep 
 most geometry features of the point cloud while keep the evenness. 
 Inspired by Chen[], we use graph filter to extract features of point 
 cloud and select points with higher features. We use the random walk 
-Laplacian $L_0=D^{-1}L=I-D^{-1}W$ to extract features, which is a 
-high-pass graph filter keeping sharp features. Thus, we can represent 
-features of point cloud $X$ as $L_0X$ and the remaining features (of 
-the simplified point cloud) as $\Psi L_0X$. Now we define the feature 
-loss of simplification as $l_f=\Psi L_0X-L_0X$.
+Laplacian
+\begin{center}
+$L_0=D^{-1}L=I-D^{-1}W$
+\end{center}
+% cancel the indent
+\noindent{to extract features, which is a high-pass graph filter 
+keeping sharp features. Thus, we can represent features of point 
+cloud $X$ as $L_0X$ and the remaining features (of the simplified 
+point cloud) as $\Psi L_0X$. Now we define the feature loss of 
+simplification as}
+\begin{center}
+$\mathcal{L}_f=\lVert\Psi L_0X-L_0X\rVert^2_F$.
+\end{center}
+\noindent{Here, we use the F-norm of matrix and set F as 2.}
 
 However, merely using random walk Laplacian will cause the unevenness 
 of point cloud because edges with sharp features will be saved sound 
@@ -142,42 +152,110 @@ term to control the evenness of the simplified point cloud.
 
 When constructing the graph, we select points within radius $r$ as 
 point's neighbour. If we suppose the point cloud is even, the number 
-of neighbours of each point should be approximately equal and thus, 
-we can use $k$-nearest neighbours. When the point cloud is even, the 
-degree of each node is approximately equal. If simplified
+of neighbours of each point should be approximately equal and thus 
+we can use $k$-nearest neighbours -- when the point cloud is even, the 
+degree of each node is approximately equal.
+
+We use binary matrix $A$ to represent the adjacency of graph i.e 
+$A_{ij}=1$ if and only if $x_j$ is one of the neighbours of $x_i$.
+Each line of A represent the relation of the point with its neighbours 
+and the sum of each line should be $k$. By means of the definition of 
+$\Psi$, the adjacency matrix of the simplified point cloud graph can 
+be represented as $A\Psi$. Given the simplification rate $\alpha$, the 
+number of neighbours in the simplified point cloud graph should be 
+approximately equal to $alpha k$ if simplified evenly. So we define the 
+evenness term as
+\begin{center}
+$\mathcal{L}_e=\lVert A\Psi\boldsymbol{1}-
+\alpha k\boldsymbol{1}\rVert^2_F$,
+\end{center}
+\noindent{where $\boldsymbol{1}$ represent the column vector with every 
+element equal to 1.}
+
+Now we can formulate the point cloud simplification problem as an 
+optimization problem:
+\begin{center}
+$\min\limits_{\Psi}\mathcal{L}=\mathcal{L}_f+\lambda\mathcal{L}_e=
+\lVert\Psi L_0X-L_0X\rVert^2_F+\lambda\lVert A\Psi\boldsymbol{1}-
+\alpha k\boldsymbol{1}\rVert^2_F$,\\
+s.t. $\Psi_{ii}\in{0,1}, i=1,2,...,N$; $\Psi_{ij}=0, i\neq j$; 
+$tr(\Psi)=\alpha N$,
+\end{center}
+\noindent{where $\lambda$ is a hyper-parameter to keep balance of 
+feature and evenness.}
 
 
 
-An example of a bad paper:
-\begin{flushleft}
-\setlength{\leftskip}{.15in}
-\hspace{.5in} An analysis of the frobnicatable foo filter.\\
-In this paper we present a performance analysis of our \\
-previous paper [1], and show it to be inferior to all \\
-previously known methods. Why the previous paper \\
-was accepted without this analysis is beyond me.\\
+\section{Formulation Optimization}
+%\label{sec:page style}
 
-[1] Removed for blind review\\
-\setlength{\leftskip}{0in}
-\end{flushleft}
+The optimization problem we put forward before is a combinatorial 
+optimization problem, which is NP-hard. To simplify the algorithm, 
+we relax the constraints to approximate diagonal matrix $\Psi$ and 
+$0 \le \Psi_{ij} \le 1$. Then the optimization problem can be 
+represented as
+\begin{center}
+$\min\limits_{\Psi}\mathcal{L}=\lVert\Psi L_0X-L_0X\rVert^2_F+\lambda
+\lVert A\Psi\boldsymbol{1}-\alpha k\boldsymbol{1}\rVert^2_F$,\\
+s.t. $tr(\Psi)=\alpha N$, $\lVert\Psi\rVert^2_F=\alpha N$.
+\end{center}
+
+Now we can use the method of Lagrange multiplier to solve this 
+optimization problem. Suppose the Lagrange multipliers for the two 
+constraints are $\beta$ and $\gamma$ respectively, the solution will 
+be
+\begin{center}
+$\Psi=(\gamma I+I+\lambda A^2)^{-1}(L_0XX^TL_0^T+\lambda k\alpha AJ-
+1/2 \beta I)(L_0XX^TL_0^T+\gamma I+J)^{-1}$,
+\end{center}
+\noindent{where $I \in \mathbb{R}^{N \times N}$ represent the 
+identify matrix and 
+$J=\boldsymbol{1 1}^T \in \mathbb{R}^{N \times N}$ 
+represent the matrix with every element equal to 1. And we 
+heuristically set $\gamma$ and $\beta$ as $1/\alpha-1-2k\lambda$ and 
+$-\alpha\gamma(\gamma+1)$ respectively.}
+
+Each line of relaxed $\Psi$, denoted as $\Psi_i^T$ can be regarded as 
+weights of point $x_j$ to be selected relevant to other points. We 
+sum each element of $\Psi_i$ and define it as the priority of point $x_j$.
+Then we sort the points according to their priority and select the top 
+$\alpha$ points as the simplified point cloud.
 
 
-\section{Page Style}
-\label{sec:page style}
 
-All paragraphs must be indented.  All paragraphs must be
-justified, i.e. both left-justified and right-justified.
+\section{Experiment Results}
 
-\subsection{Text Font of Entire Document}
+Our algorithm depends on matrix operations, which is time and storage 
+expensively. To solve this problem, we divide the point cloud into 
+small grids first, and then simplify each grid respectively. For better 
+performance, there is small overlapping between adjacent grid.
 
-The entire document should be in Times New Roman or Times font.
-Type 3 fonts must not be used.  Other font types may be used if
-needed for special purposes.
+\subsection{Results compared to previous algorithms}
+
+bunny???
+Alice???
+dragon???
+monster???
+
+time????????
+performance: visually(manifold) and quantitatively(error)
+
+\subsection{Results on excessively large point clouds}
+
+landscape???
+
+\section{Conclusion}
+
+advantage:
+avoidance of normals
+graph filter, local \& global
+sharp features(edges) while even
+
+disadvantage: small holes!
 
 Recommended font sizes are shown in Table \ref{tab:font-sizes}.
 
-\subsection{Title and Author Details}
-\label{sec:title and author details}
+/
 
 Title must be in 24 pt Regular font.  Author name must be in 11
 pt Regular font.  Author affiliation must be in 10 pt Italic.

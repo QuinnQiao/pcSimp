@@ -1,8 +1,8 @@
 # pcSimp
 
-**Evenness-controllable point cloud simplification via graph filter**
+#### **Evenness-controllable point cloud simplification via graph filter**
 
-
+$\ $
 
 Code in matlab:
 

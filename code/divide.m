@@ -1,4 +1,9 @@
-function [grid, forinit, GRID_NUM, GRID_DELTA] = divide(pcname, alpha)
+function [grid, forinit, num, delta, sigma] = ...
+            divide(pcname, alpha)
+    % divide the point cloud into overlapped grids
+    % Author: Junkun Qi
+    % 2018/5/13
+
     % load point cloud
     pc = pcread(pcname);
     X = double(pc.Location);
@@ -49,7 +54,9 @@ function [grid, forinit, GRID_NUM, GRID_DELTA] = divide(pcname, alpha)
         end
     end
     
-    % expected number of points in the simplified point cloud
+    % return value
     forinit(1)= ceil(n*alpha);
-    GRID_DELTA = GRID_DELTA/10;
+    num = prod(GRID_NUM);
+    delta = GRID_DELTA/10;
+    sigma = nthroot(VOLUMN/n,3)^2;
 end
