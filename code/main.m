@@ -14,19 +14,13 @@ k = 15;
 p_thres = 3000;
 
 % load and split the point cloud into grids
-[grid, forinit, n, delta, sigma] = divide(pcname, alpha, p_thres);
-
-% simplify each grid
-% simp_grid = repmat(...
-%     struct('X',zeros(ceil(forinit(1)*alpha),forinit(2))), 1,n);
+[grid, forinit, n, sigma] = divide(pcname, alpha, p_thres);
 m = 0;
 X = zeros(forinit);
 for i = 1:n
    tmp = simplify(alpha, lambda, sigma, eta, k, grid(i).X);
    % remove overlapped edges
    range = grid(i).range;
-   range(:,1) = range(:,1)-delta;
-   range(:,2) = range(:,2)+delta;
    tmp = tmp(tmp(:,1)>range(1,1) & tmp(:,1)<range(1,2),:);
    tmp = tmp(tmp(:,2)>range(2,1) & tmp(:,2)<range(2,2),:);
    tmp = tmp(tmp(:,3)>range(3,1) & tmp(:,3)<range(3,2),:);
