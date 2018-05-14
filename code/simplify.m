@@ -5,10 +5,11 @@ function simpX = simplify(alpha, lambda, sigma, eta, k, X)
 
     n = size(X,1);
 
-    if n == 0
+    if n*alpha < 1
         simpX = [];
     else
         m = ceil(n*alpha);
+        k = min(k,n-1);
         
         L = zeros(n);
         A = zeros(n);

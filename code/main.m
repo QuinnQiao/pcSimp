@@ -5,8 +5,10 @@
 clear;
 time_start = clock;
 
-pcname = 'bunny.ply';
-simpname = 'bunny-simp.ply';
+% Buddha
+dirname = 'nocolor';
+pcname = fullfile(dirname,'dragon.ply');
+simpname =  fullfile(dirname,'dragon-simp.ply');
 alpha = 0.1;
 lambda = 0.1;
 eta = 0.05;
@@ -18,8 +20,11 @@ p_thres = 3000;
 m = 0;
 X = zeros(forinit);
 for i = 1:n
+   disp(i);
    tmp = simplify(alpha, lambda, sigma, eta, k, grid(i).X);
-   % remove overlapped edges
+   if isempty(tmp)
+       continue;
+   end
    range = grid(i).range;
    tmp = tmp(tmp(:,1)>range(1,1) & tmp(:,1)<range(1,2),:);
    tmp = tmp(tmp(:,2)>range(2,1) & tmp(:,2)<range(2,2),:);
@@ -27,8 +32,10 @@ for i = 1:n
    t = size(tmp,1);
    X(m+1:m+t,:) = tmp;
    m = m + t;
+   clear tmp;
 end
 
+disp(['m: ',num2str(m)]);
 % save the simplified point cloud
 if forinit(2) == 3
     pc = pointCloud(X(1:m,:));

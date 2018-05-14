@@ -11,6 +11,7 @@ function [grid, forinit, num, sigma] = ...
         X = [X, double(pc.Color)];
     end
     n = pc.Count;
+    disp(['n: ',num2str(n)]);
     range = [pc.XLimits; pc.YLimits; pc.ZLimits];
     clear pc;
 
@@ -18,7 +19,7 @@ function [grid, forinit, num, sigma] = ...
     GRID_NUM = ceil(n/p_thres);
     VOLUMN = prod(range(:,2)-range(:,1));
     GRID_LEN = nthroot(VOLUMN/GRID_NUM,3);
-    GRID_DELTA = GRID_LEN*0.05;
+    GRID_DELTA = GRID_LEN*0.1;
     GRID_NUM = round((range(:,2)-range(:,1))/GRID_LEN);
     GRID_LEN = (range(:,2)-range(:,1))./GRID_NUM;
 
@@ -46,14 +47,8 @@ function [grid, forinit, num, sigma] = ...
                 tmpk = tmpj(tmpj(:,3)>z_min-GRID_DELTA & tmpj(:,3)<z_max+GRID_DELTA,:);
                 % compute index
                 p = (i-1)*GRID_NUM(2)*GRID_NUM(3)+(j-1)*GRID_NUM(3)+k;
-                if size(tmpk,1)<(1/alpha)
-                    disp([num2str(i),' is empty grid']);
-                    grid(p).X = [];
-                    grid(p).range = [];
-                else
-                    grid(p).X = tmpk;
-                    grid(p).range = [x_min, x_max; y_min, y_max; z_min, z_max];
-                end
+                grid(p).X = tmpk;
+                grid(p).range = [x_min, x_max; y_min, y_max; z_min, z_max];
             end
         end
     end
