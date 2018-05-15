@@ -1,5 +1,5 @@
 function simpX = simplify(alpha, lambda, sigma, eta, k, X)
-    % simplify the given point cloud (points in a grid)
+    % to simplify the given point cloud (points in a grid)
     % Author: Junkun Qi
     % 2018/5/13
 
@@ -44,5 +44,6 @@ function simpX = simplify(alpha, lambda, sigma, eta, k, X)
         [~,p]=sort(d*-1); % max of d <=> min of -d
 
         simpX = X(p(1:m),:);
+        clear L A I J Psi d;
     end
 end
