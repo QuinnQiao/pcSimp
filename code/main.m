@@ -6,9 +6,10 @@ clear;
 time_start = clock;
 
 dirname = 'nocolor';
-pcname = fullfile(dirname,'dragon.ply');
-simpname =  fullfile(dirname,'dragon-simp.ply');
+pcname = fullfile(dirname,'bunny.ply');
+simpname =  fullfile(dirname,'bunny-simp-2.ply');
 alpha = 0.1;
+scale = 1.1;
 lambda = 0.1;
 eta = 0.05;
 K = 15;
@@ -63,7 +64,7 @@ for i = 1:GRID_NUM(1)
             
             
             % simplify this grid
-            tmp = simplify(alpha, lambda, sigma, eta, K, tmpk);
+            tmp = simplify(alpha*scale, lambda, sigma, eta, K, tmpk);
             if isempty(tmp)
                 continue;
             end
