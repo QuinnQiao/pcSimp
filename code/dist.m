@@ -1,9 +1,4 @@
 function d = dist(X, p, sigma, eta)
-	% compute the spatial distance and color distance
-	%   weighted sum of two kinds of distance
-    % Author: Junkun Qi
-    % 2018/5/13
-
 	% init
 	d = zeros(size(X,1),1);
 	% if there's color
