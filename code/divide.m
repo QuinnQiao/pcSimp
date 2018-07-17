@@ -14,11 +14,11 @@ function [grid, len] = divide(X, p_thres)
     forinit = [ceil(p_thres*1.5), size(X,2)];
     len = prod(GRID_NUM);
     grid = repmat(struct('X',zeros(forinit),...
-            'range',zeros(3,2)), 'edge',zeros(3,2), 1, len);
+            'range',zeros(3,2), 'edge',zeros(3,2)), 1, len);
     for i = 1:GRID_NUM(1)
         x_min = range(1,1)+GRID_LEN(1)*(i-1);
-        x_max = x_min+GRID_LEN(1);
-        GRID_DELTA = GRID_LEN(1)*0.08;
+        x_max = range(1,1)+GRID_LEN(1)*i;
+        GRID_DELTA = GRID_LEN(1)*0.1;
         % overlapping
         tmpi = X(X(:,1)>x_min-GRID_DELTA & X(:,1)<x_max+GRID_DELTA,:);
         xst = 0;
@@ -31,8 +31,8 @@ function [grid, len] = divide(X, p_thres)
         end
         for j = 1:GRID_NUM(2)
             y_min = range(2,1)+GRID_LEN(2)*(j-1);
-            y_max = y_min+GRID_LEN(2);
-            GRID_DELTA = GRID_LEN(2)*0.08;
+            y_max = range(2,1)+GRID_LEN(2)*j;
+            GRID_DELTA = GRID_LEN(2)*0.1;
             % overlapping
             tmpj = tmpi(tmpi(:,2)>y_min-GRID_DELTA & tmpi(:,2)<y_max+GRID_DELTA, :);
             yst = 0;
@@ -46,8 +46,8 @@ function [grid, len] = divide(X, p_thres)
             end
             for k = 1:GRID_NUM(3)
                 z_min = range(3,1)+GRID_LEN(3)*(k-1);
-                z_max = z_min+GRID_LEN(3);
-                GRID_DELTA = GRID_LEN(3)*0.08;
+                z_max = range(3,1)+GRID_LEN(3)*k;
+                GRID_DELTA = GRID_LEN(3)*0.1;
                 % overlapping
                 tmpk = tmpj(tmpj(:,3)>z_min-GRID_DELTA & tmpj(:,3)<z_max+GRID_DELTA, :);
                 zst = 0;

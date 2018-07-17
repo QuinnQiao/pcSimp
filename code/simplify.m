@@ -29,11 +29,11 @@ function simpX = simplify(alpha, lambda, sigma, eta, k, X)
         % min 1/2x'Hx + f'x
         % s.t Ax<=b, Aeqx=beq, lb<=x<=ub
         H = diag(f) + lambda*(A'*A);
-        f = f + lambda*alpha*k*A*ones(n,1);      
+        f = f + lambda*alpha*k*A*ones(n,1);
         d = quadprog(H, -f, [], [], ones(1,n), m, zeros(n,1), ones(n,1));
         [~,p] = sort(-d); % max of d <=> min of -d
         % top alpha
         simpX = X(p(1:m),:);
-        clear L A H f d;
+        clear L A H f d p;
     end
 end

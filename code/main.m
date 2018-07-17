@@ -1,16 +1,14 @@
 clear;
 time_start = clock;
 % hyper-parameters
-filename = 'nocolor/bunny';
+filename = 'nocolor/armadillo';
 pcname = [filename, '.ply'];
 alpha = 0.1;
-lambda = 1.9e-7;
+lambda = 0.01;
 eta = 0.05;
 K = 15;
 p_thres_min = 3000;
 p_thres_max = 8000;
-simpname = [filename, '-sr', num2str(alpha),...
-			'-cp', num2str(lambda), '.ply'];
 
 % load the point cloud
 pc = pcread(pcname);
@@ -29,18 +27,22 @@ VOLUMN = prod(range(:,2)-range(:,1));
 GRID_LEN = nthroot(VOLUMN/GRID_NUM,3);
 GRID_NUM = ceil((range(:,2)-range(:,1))/GRID_LEN);
 GRID_LEN = (range(:,2)-range(:,1))./GRID_NUM;
-sigma = nthroot(VOLUMN/n,3)^2;
+sigma = double(nthroot(VOLUMN/n,3)^2);
+lambda = lambda*sigma;
+simpname = [filename, '-sr', num2str(alpha),...
+			'-cp', num2str(lambda), '.ply'];
+
 % simplify while dividing
 m = 0;
 simpX = zeros(round(alpha*n), size(X,2));
 for i = 1:GRID_NUM(1)
     x_min = range(1,1)+GRID_LEN(1)*(i-1);
-    x_max = x_min+GRID_LEN(1);
+    x_max = range(1,1)+GRID_LEN(1)*i;
     GRID_DELTA = GRID_LEN(1)*0.1;
     % overlapping
     tmpi = X(X(:,1)>x_min-GRID_DELTA & X(:,1)<x_max+GRID_DELTA, :);
-    xst = 0;
-    xed = 0;
+    xst = 0.0;
+    xed = 0.0;
     % for floating point comparing (==)
     if i == 1
     	xst = 1e-5;
@@ -50,12 +52,12 @@ for i = 1:GRID_NUM(1)
     end
     for j = 1:GRID_NUM(2)
         y_min = range(2,1)+GRID_LEN(2)*(j-1);
-        y_max = y_min+GRID_LEN(2);
+        y_max = range(2,1)+GRID_LEN(2)*j;
         GRID_DELTA = GRID_LEN(2)*0.1;
         % overlapping
         tmpj = tmpi(tmpi(:,2)>y_min-GRID_DELTA & tmpi(:,2)<y_max+GRID_DELTA, :);
-		yst = 0;
-	    yed = 0;
+		yst = 0.0;
+	    yed = 0.0;
 	    % for floating point comparing (==)
 	    if j == 1
 	    	yst = 1e-5;
@@ -65,12 +67,12 @@ for i = 1:GRID_NUM(1)
 	    end
         for k = 1:GRID_NUM(3)
             z_min = range(3,1)+GRID_LEN(3)*(k-1);
-            z_max = z_min+GRID_LEN(3);
+            z_max = range(3,1)+GRID_LEN(3)*k;
             GRID_DELTA = GRID_LEN(3)*0.1;
             % overlapping
             tmpk = tmpj(tmpj(:,3)>z_min-GRID_DELTA & tmpj(:,3)<z_max+GRID_DELTA, :);
-            zst = 0;
-		    zed = 0;
+            zst = 0.0;
+		    zed = 0.0;
 		    % for floating point comparing (==)
 		    if k == 1
 		    	zst = 1e-5;
@@ -82,6 +84,7 @@ for i = 1:GRID_NUM(1)
             disp([' simplifying in ', num2str(i), num2str(j), num2str(k)]);
             if size(tmpk, 1) > p_thres_max
             	% divide again
+            	disp('    deep dividing...')
             	[deep_grid, deep_grid_num] = divide(tmpk, p_thres_min);
             	for p = 1:deep_grid_num
             		tmp = simplify(alpha, lambda, sigma, eta, K, deep_grid(p).X);
