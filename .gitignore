@@ -1,14 +1,14 @@
 nocolor
 uniform
 meanCurve
-graph
+_graph
 denoising
 figure
 PSNR
 reconstruction
 registration
-code
-code2
+_code
+_code2
 show.m
 img2eps.m
 result2eps.m
