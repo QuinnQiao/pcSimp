@@ -24,7 +24,7 @@ simplify.m: simplify each grid individually on graph
 
 
 
-Refences:
+References:
 
 [1] Siheng Chen, Dong Tian, Chen Feng, Anthony Vetro, and Jelena Kovaˇcevi´c, “Fast resampling of three-dimensional point clouds via graphs,” IEEE Transactions on Signal Processing, vol. 66, no. 3, pp.
 666–681, 2018.
