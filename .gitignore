@@ -1,18 +1,10 @@
-nocolor
-uniform
-meanCurve
-_graph
-denoising
-figure
-PSNR
-reconstruction
-registration
-_code
-_code2
-show.m
-img2eps.m
-result2eps.m
+_version/
 
-*.asv
-*.ply
-*.png
+uniform/
+meanCurve/
+graph/
+
+reconstruction/
+registration/
+figure/
+show/
