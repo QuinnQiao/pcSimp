@@ -18,6 +18,9 @@ function simpX = simplify(alpha, lambda, k, X, range)
         % Parameter used in edge weights -> exp(-d^2/sigma)
         sigma = 0;
         
+        % Only coordinates are used to construct graph here
+        % Other properties such as color and texture can also be adopted
+        %   with a balance of coordinates
         for i = 1:n
             d = sum((X-X(i,:)).^2,2);
             [~, p] = sort(d);

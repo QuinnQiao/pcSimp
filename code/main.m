@@ -5,8 +5,8 @@
 clear;
 clc;
 
-filename = 'ply/anchor';
-suffix = '.ply'
+filename = '../ply/anchor';
+suffix = '.ply';
 pcname = [filename, suffix];
 
 % Hyper-parameters
@@ -22,6 +22,8 @@ time_start = clock;
 
 % Load the point cloud
 pc = pcread(pcname);
+% Only coordinates are used to construct graph here (naive)
+% Other properties such as color and texture can also be adopted.
 X = double(pc.Location);
 n = pc.Count;
 range = [pc.XLimits; pc.YLimits; pc.ZLimits];
