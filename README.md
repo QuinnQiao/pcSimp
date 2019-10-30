@@ -1,4 +1,4 @@
-The implementation of **Feature Preserving and Uniformity-Controllable Point Cloud Simplification on Graph**, ICME19
+The implementation of [**Feature Preserving and Uniformity-Controllable Point Cloud Simplification on Graph**](https://arxiv.org/abs/1812.11383), ICME19 (Oral)
 
 
 
@@ -21,6 +21,19 @@ simplify.m: simplify each grid individually on graph
 2. Grid effect.
 
    The proposed formulation is shift-invariant, rotation-invariant and scale-invariant [1]. But the properties will not be guaranteed due to the divide-into-cube trick (proposed to speed up the algorithm), in which the global information is partially ignored too.
+
+
+**Citation:**
+
+If you find this code helpful for your research, please cite our paper.
+```
+@inproceedings{qi19fpuc,
+  title={Feature Preserving and Uniformity-Controllable Point Cloud Simplification on Graph},
+  author={Junkun Qi and Wei Hu and Zongming Guo.},
+  booktitle={ International Conference on Multimedia and Expo (ICME) },
+  year={2019}
+}
+```
 
 
 
